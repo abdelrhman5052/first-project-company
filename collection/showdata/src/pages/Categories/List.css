@@ -1,0 +1,99 @@
+.list-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .list-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th {
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    background: #f3f4f6;
+    text-align: left;
+    padding-left: 100px;
+  }
+  
+  .custom-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+    color: #4b5563;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .icon {
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .status.active {
+    color: green;
+    font-weight: 500;
+  }
+  
+  .status.inactive {
+    color: red;
+    font-weight: 500;
+  }
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px; /* حط المسافة هنا بدل الزرار */
+  }
+  
+  
+  .btn {
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 18px;
+  }
+  
+  .btn.blue { background: #2563eb; }
+  .btn.green { background: #16a34a; }
+  .btn.orange { background: #f97316; }
+  .btn.red { background: #dc2626; }
+  .btn.gray { background: #6b7280; }
+  
+  .btn:disabled {
+    
+    opacity: 0.6;
+  }
+  
+  .pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+  }
+  
