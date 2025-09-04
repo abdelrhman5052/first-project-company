@@ -83,13 +83,13 @@ export default function List() {
                 )}
               </td>
               <td className="actions">
-                <Link to={`/categories/${c.category_id}`} className=" blue">
+                <Link to={`/categories/${c.category_id}`} className=" boo ">
                   تفاصيل
                 </Link>
-                <Link to={`/categories/${c.category_id}/edit`} className=" green">
+                <Link to={`/categories/${c.category_id}/edit`} className=" boo green">
                   تعديل
                 </Link>
-                <Link to={`/categories/${c.category_id}/sub`} className=" orange">
+                <Link to={`/categories/${c.category_id}/sub`} className=" boo orange">
                   الأقسام الفرعية
                 </Link>
                 <button onClick={() => onDelete(c.category_id)} className="btn red">

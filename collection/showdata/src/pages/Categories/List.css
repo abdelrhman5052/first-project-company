@@ -1,5 +1,5 @@
 .list-container {
-    background: #fff;
+    background-color: #fff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -54,10 +54,11 @@
     color: red;
     font-weight: 500;
   }
+
   .actions {
     display: flex;
     gap: 8px;
-    margin-top: 18px; /* حط المسافة هنا بدل الزرار */
+    margin-top: 18px;
   }
   
   
@@ -73,11 +74,8 @@
     margin-top: 18px;
   }
   
-  .btn.blue { background: #2563eb; }
-  .btn.green { background: #16a34a; }
-  .btn.orange { background: #f97316; }
+ 
   .btn.red { background: #dc2626; }
-  .btn.gray { background: #6b7280; }
   
   .btn:disabled {
     
@@ -97,3 +95,22 @@
     padding: 20px;
   }
   
+
+  .boo {
+    text-decoration: none;
+    margin-left : 5px;
+    /* background-color: gray; */
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+    width: fit-content;
+    padding:2px 4px;
+    margin-top: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+
+  .boo:hover {
+    background-color: red;
+  }
