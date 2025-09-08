@@ -59,6 +59,33 @@ const navItems: NavItem[] = [
       { name: "404 Error", path: "/error-404", pro: false },
     ],
   },
+
+  {
+    icon: <GridIcon />,
+    name: "dash",
+    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+  },
+  {
+    icon: <UserCircleIcon />,
+    name: "Categories",
+    path: "/categories",
+  },
+  {
+    icon: <BoxCubeIcon />,
+    name: "Ads",
+    path: "/ads",
+  },
+  {
+    icon: <PageIcon />,
+    name: "Slider",
+    path: "/slider",
+  },
+  {
+    icon: <UserCircleIcon />, // لو عندك أيقونة إشعارات
+    name: "Notifications",
+    path: "/notifications",
+  },
+
 ];
 
 const othersItems: NavItem[] = [

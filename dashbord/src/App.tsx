@@ -18,6 +18,10 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import Categories from "./pages/categories/Categories";
+import Ads from "./pages/ads/Ads";
+import Slider from "./pages/slider/Slider";
+import Notifications from "./pages/notifications/Notifiations";
 
 export default function App() {
   return (
@@ -47,6 +51,14 @@ export default function App() {
             <Route path="/buttons" element={<Buttons />} />
             <Route path="/images" element={<Images />} />
             <Route path="/videos" element={<Videos />} />
+
+            {/* categories */}
+
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/ads" element={<Ads />} />
+            <Route path="/slider" element={<Slider />} />
+            <Route path="/notifications" element={<Notifications />} />
+
 
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
