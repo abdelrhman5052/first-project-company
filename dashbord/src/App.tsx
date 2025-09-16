@@ -22,57 +22,181 @@ import Categories from "./pages/categories/Categories";
 import Ads from "./pages/ads/Ads";
 import Slider from "./pages/slider/Slider";
 import Notifications from "./pages/notifications/Notifiations";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 export default function App() {
   return (
-    <>
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
-            <Route index path="/" element={<Home />} />
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        {/* Dashboard Layout */}
+        <Route element={<AppLayout />}>
+          <Route
+            index
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* Others Page */}
-            <Route path="/profile" element={<UserProfiles />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/blank" element={<Blank />} />
+          {/* Others Page */}
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <UserProfiles />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/calendar"
+            element={
+              <ProtectedRoute>
+                <Calendar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/blank"
+            element={
+              <ProtectedRoute>
+                <Blank />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* Forms */}
-            <Route path="/form-elements" element={<FormElements />} />
+          {/* Forms */}
+          <Route
+            path="/form-elements"
+            element={
+              <ProtectedRoute>
+                <FormElements />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* Tables */}
-            <Route path="/basic-tables" element={<BasicTables />} />
+          {/* Tables */}
+          <Route
+            path="/basic-tables"
+            element={
+              <ProtectedRoute>
+                <BasicTables />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* Ui Elements */}
-            <Route path="/alerts" element={<Alerts />} />
-            <Route path="/avatars" element={<Avatars />} />
-            <Route path="/badge" element={<Badges />} />
-            <Route path="/buttons" element={<Buttons />} />
-            <Route path="/images" element={<Images />} />
-            <Route path="/videos" element={<Videos />} />
+          {/* Ui Elements */}
+          <Route
+            path="/alerts"
+            element={
+              <ProtectedRoute>
+                <Alerts />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/avatars"
+            element={
+              <ProtectedRoute>
+                <Avatars />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/badge"
+            element={
+              <ProtectedRoute>
+                <Badges />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/buttons"
+            element={
+              <ProtectedRoute>
+                <Buttons />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/images"
+            element={
+              <ProtectedRoute>
+                <Images />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/videos"
+            element={
+              <ProtectedRoute>
+                <Videos />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* categories */}
+          {/* categories */}
+          <Route
+            path="/categories"
+            element={
+              <ProtectedRoute>
+                <Categories />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ads"
+            element={
+              <ProtectedRoute>
+                <Ads />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/slider"
+            element={
+              <ProtectedRoute>
+                <Slider />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <ProtectedRoute>
+                <Notifications />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/ads" element={<Ads />} />
-            <Route path="/slider" element={<Slider />} />
-            <Route path="/notifications" element={<Notifications />} />
+          {/* Charts */}
+          <Route
+            path="/line-chart"
+            element={
+              <ProtectedRoute>
+                <LineChart />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/bar-chart"
+            element={
+              <ProtectedRoute>
+                <BarChart />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
 
+        {/* Auth Layout */}
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
 
-            {/* Charts */}
-            <Route path="/line-chart" element={<LineChart />} />
-            <Route path="/bar-chart" element={<BarChart />} />
-          </Route>
-
-          {/* Auth Layout */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-
-          {/* Fallback Route */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </>
+        {/* Fallback Route */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
